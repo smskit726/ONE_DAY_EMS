@@ -2,6 +2,25 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var = "rootPath" value="${pageContext.request.contextPath}"/>
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		document.querySelector("#ems-write").addEventListener("click", function(){
+			document.location.href="${rootPath}/ems/write"
+		});
+		
+		document.querySelector("table").addEventListener("click", function (event) {
+		    let tag_name = event.target.tagName;
+		    if(tag_name ==="TD"){
+		    	
+		    	let seq = event.target.closest("TR").dataset.seq;
+		    	if(seq){
+		    		document.location.href="${rootPath}/ems/detail/" + seq;
+		    	}
+		    }
+		});
+	})
+</script>
+
 <table id="ems-list">
 	<thead>
 		<tr>

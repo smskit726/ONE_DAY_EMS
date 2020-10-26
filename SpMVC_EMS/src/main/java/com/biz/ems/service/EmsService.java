@@ -20,5 +20,7 @@ public interface EmsService {
 	public EmsVO findBySeq(long long_seq);
 
 	public int delete(long long_seq);
+	
+	public EmsVO localDateTime(EmsVO emsVO);
 
 }

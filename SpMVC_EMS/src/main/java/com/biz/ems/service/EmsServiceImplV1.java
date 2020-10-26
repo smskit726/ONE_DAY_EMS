@@ -1,5 +1,7 @@
 package com.biz.ems.service;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +51,18 @@ public class EmsServiceImplV1 implements EmsService{
 	public int delete(long long_seq) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public EmsVO localDateTime(EmsVO emsVO) {
+		LocalDateTime lDateTime = LocalDateTime.now();
+		String lDate = DateTimeFormatter.ofPattern("yyyy-MM-dd").format(lDateTime);
+		String lTime = DateTimeFormatter.ofPattern("HH:mm:SS").format(lDateTime);
+		
+		emsVO.setS_date(lDate);
+		emsVO.setS_time(lTime);
+		
+		return emsVO;
 	}
 
 }

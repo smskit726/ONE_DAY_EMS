@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+form#write-form {
+		width: 80%;
+		margin: 10px auto;	
+	}
+	
+	form#write-form fieldset{
+		border: 1px solid coral;
+		border-radius: 10px;
+	}
+	
+	form#write-form legend {
+		width:10%;
+		text-align:center;
+		font-size: 15pt;
+		color: darkblue;
+		margin: 5px;
+		padding: 5px;
+	}
+	
+	form#write-form label {
+		display: inline-block;
+		width: 18%;
+		padding: 4px;
+		margin: 4px;
+		color: darkblue;
+		text-align: right;
+		font-weight: bold;
+	}
+	
+	form#write-form input {
+		display: inline-block;
+		width: 70%;
+		padding: 4px;
+		margin: 4px;
+	}
+	
+	form#write-form textarea {
+		padding:4px;
+		margin:4px;
+		width: 70%;
+	}
+	
+	div.btn-box {
+		width: 95%;
+		text-align: right;
+	}
+	
+	form#write-form .btn-box button {
+		color: white;
+		cursor: pointer;
+		border: none;
+		border-radius: 5px;
+		outline: none;
+		padding: 5px 10px;
+		margin: 5px;	
+	}
+	
+	form#write-form .btn-box button:hover{
+		box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+	}
+	
+	button#save {
+		background-color: burlywood;
+	}
+	
+	button#list {
+		background-color: coral;
+	}

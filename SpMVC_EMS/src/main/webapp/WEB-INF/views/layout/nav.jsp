@@ -8,11 +8,15 @@
 		document.querySelector("#nav-ems").addEventListener("click", function(){
 			document.location.href = "${rootPath}/ems/list"
 		})
+		
+		document.querySelector("#nav-home").addEventListener("click",function(){
+			document.location.href = "${rootPath}/"
+		})
 	})
 </script>
 <nav>
 	<ul>
-		<li>Home</li>
+		<li id="nav-home">Home</li>
 		<li id="nav-ems">메일관리</li>
 	</ul>
 </nav>

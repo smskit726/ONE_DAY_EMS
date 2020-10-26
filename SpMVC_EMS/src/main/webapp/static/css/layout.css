@@ -16,17 +16,21 @@
 	}
 	
 	header {
-		height: 300px;
-		color: white;
+	    display: flex;
+	    flex-flow: column;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 1.5rem;
+	
 		background-image: url("../images/email.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		background-attachment: fixed;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	    height: 100%;
+	
+	    background-attachment: fixed;
+	    color: white;
 	}
 	
 	header h2 {
@@ -54,7 +58,7 @@
 	}
 	
 	section#content {
-		flex: 1;
+		height: 100%;
 	}
 	
 	footer {
