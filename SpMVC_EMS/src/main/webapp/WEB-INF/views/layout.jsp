@@ -15,9 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<link href="${rootPath}/static/css/layout.css?ver=1027" rel="stylesheet" />
-<link href="${rootPath}/static/css/list.css?ver=1027" rel="stylesheet" />
-<link href="${rootPath}/static/css/write.css?ver=1027" rel="stylesheet" />
+<link href="${rootPath}/static/css/layout.css?ver=1026" rel="stylesheet" />
 
 <!-- summernote -->
 <link rel="stylesheet" href="${rootPath}/static/summernote/summernote-bs4.min.css"/>

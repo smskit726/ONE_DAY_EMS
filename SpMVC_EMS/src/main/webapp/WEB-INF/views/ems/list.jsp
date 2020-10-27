@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var = "rootPath" value="${pageContext.request.contextPath}"/>
+<link href="${rootPath}/static/css/list.css?ver=1026" rel="stylesheet" />
 <script>
 	document.addEventListener("DOMContentLoaded", function(){
 		document.querySelector("#ems-write").addEventListener("click", function(){
@@ -44,7 +45,13 @@
 					<td>${vo.to_email}</td>
 					<td>${vo.from_email}</td>
 					<td>${vo.s_subject}</td>
-					<td>${vo.s_file1}</td>
+					<td> <c:if test="${not empty vo.s_file1}">
+							<img src="${rootPath}/upload/${vo.s_file1}" width="50px;">
+						</c:if>
+						<c:if test="${not empty vo.s_file2}">
+							<img src="${rootPath}/upload/${vo.s_file2}" width="50px;">
+						</c:if>
+					</td>
 			</tr>
 		</c:forEach>
 	</tbody>	

@@ -10,16 +10,14 @@ import com.biz.ems.model.EmsVO;
 public interface EmsService {
 
 	public List<EmsVO> selectAll();
-
-	public void insert(EmsVO emsVO);
 	
-	public void insert(EmsVO emsVO, MultipartFile file);
-
-	public List<String> insert(EmsVO emsVO, MultipartHttpServletRequest files);
+	public void insert(EmsVO emsVO, MultipartFile s_file1, MultipartFile s_file2);
 	
 	public EmsVO findBySeq(long long_seq);
 
 	public int delete(long long_seq);
+	
+	public int update(EmsVO emsVO, MultipartFile s_file1, MultipartFile s_file2);
 	
 	public EmsVO localDateTime(EmsVO emsVO);
 

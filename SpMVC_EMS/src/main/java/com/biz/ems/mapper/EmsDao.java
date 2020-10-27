@@ -16,7 +16,7 @@ public interface EmsDao {
 	@Select("SELECT * FROM tbl_ems ORDER BY id DESC")
 	public List<EmsVO> selectAll();
 	
-	@Select("SELECT * FROM tbl_bbs WHERE id = #{id}")
+	@Select("SELECT * FROM tbl_ems WHERE id = #{seq}")
 	public EmsVO findBySeq(long seq);
 	
 	/*
@@ -33,6 +33,6 @@ public interface EmsDao {
 	@UpdateProvider(type = EmsSQL.class, method = "ems_update")
 	public int update(EmsVO EmsVO);
 	
-	@Delete("DELETE FROM tbl_ems WHERE id=#{id}")
+	@Delete("DELETE FROM tbl_ems WHERE id=#{seq}")
 	public int delete(long seq);
-}
+} 

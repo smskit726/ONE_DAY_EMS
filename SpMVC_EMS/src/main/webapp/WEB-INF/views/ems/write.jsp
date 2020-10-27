@@ -4,6 +4,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form"  prefix="form"%>
 <c:set var = "rootPath" value="${pageContext.request.contextPath}"/>
 
+<link href="${rootPath}/static/css/write.css?ver=1026" rel="stylesheet" />
+
 <script>
 	$(function(){
 		var toolbar = [
@@ -28,9 +30,12 @@
 	})
 </script>
 
-<form:form id="write-form" modelAttribute="EMSVO">
+<form:form id="write-form" modelAttribute="EMSVO" enctype="multipart/form-data">
 	<fieldset>
 		<legend>메일작성</legend>
+			<div>
+				<form:input path="id" type="hidden"/>
+			</div>
 			<div>
 				<label for="s_date">날짜</label>
 				<form:input path="s_date" readonly="true" style="outline:none;"/>
@@ -61,15 +66,15 @@
 			</div>
 			
 			<div style="margin-top: 10px;">
-				<label for="s_file1">첨부파일1</label>
-				<form:input path="s_file1" type="file" accept="image/*"/>
-				<label for="s_file2">첨부파일2</label>
-				<form:input path="s_file2" type="file" accept="image/*"/>
+				<label for="file1">첨부파일1</label>
+				<input name="file1" type="file" accept="image/*"/>
+				<label for="file2">첨부파일2</label>
+				<input name="file2" type="file" accept="image/*"/>
 			</div>
 			
 			<div class="btn-box">
 				<button type="button" id="list">리스트</button>
-				<button type="submit" id="save">저장</button>
+				<button type="submit" id="save">전송</button>
 			</div>
 	</fieldset>
 </form:form>
