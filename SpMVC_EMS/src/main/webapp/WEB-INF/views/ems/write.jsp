@@ -27,6 +27,10 @@
 				height:"200px",
 				toolbar : toolbar
 				})
+				
+		$("#list").click(function(){
+			document.location.href = "${rootPath}/ems/list"
+		})		
 	})
 </script>
 
